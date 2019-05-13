@@ -3,6 +3,7 @@
 ## Description
 
 Cloud Foundry Space Services CLI Plugin is a plugin for Cloud Foundry CLI tool that aims to speed-up
+retrieval of list of service instances in the space targeted by Cloud Foundry CLI.
 
 ## Prerequisites
 
