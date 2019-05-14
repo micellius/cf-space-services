@@ -284,7 +284,9 @@ type ServiceInstances []ServiceInstance
 func (a ServiceInstances) Len() int      { return len(a) }
 func (a ServiceInstances) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
 func (a ServiceInstances) Less(i, j int) bool {
-	return a[i].Service < a[j].Service || (a[i].Service == a[j].Service && a[i].Plan < a[j].Plan)
+	return a[i].Service < a[j].Service ||
+		(a[i].Service == a[j].Service && a[i].Plan < a[j].Plan) ||
+		(a[i].Service == a[j].Service && a[i].Plan == a[j].Plan && a[i].Name < a[j].Name)
 }
 
 func max(arg0, arg1 int) int {
